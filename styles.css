@@ -879,6 +879,74 @@ nav.scrolled {
 }
 
 .t-logo img {
+    height: 100%;
+    width: auto;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* MARQUEE ANIMATION */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 24px));
+        /* Adjust for half the list + half gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .trusted-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .trusted-logos {
+        justify-content: flex-start;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+        gap: 48px;
+    }
+
+    .t-logo {
+        flex-shrink: 0;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+
+    .trusted::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(to left, var(--dark-base), transparent);
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .trusted::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(to right, var(--dark-base), transparent);
+        pointer-events: none;
+        z-index: 2;
+    }
+}
+
+.t-logo img {
     max-height: 100%;
     max-width: 140px;
     width: auto;
@@ -1936,5 +2004,340 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+}
+
+
+
+
+
+
+/* ===== TESTIMONIALS 3D ===== */
+.testimonials-grid-3d {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 80px;
+    perspective: 2000px;
+}
+
+.testimonial-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 28px;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: cardEntrance 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    opacity: 0;
+}
+
+.testimonial-3d.fade-in-up {
+    opacity: 0; /* initial state for animation */
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.testi-card-inner {
+    padding: 40px;
+    border-radius: 28px;
+    background: transparent;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-3d:hover {
+    transform: rotateX(5deg) rotateY(-5deg) translateZ(20px);
+    border-color: var(--green);
+    box-shadow: 20px 30px 60px rgba(0, 0, 0, 0.6), 0 0 30px var(--green-glow);
+}
+
+.testimonial-3d:hover .testi-card-inner {
+    background: rgba(0, 230, 160, 0.02);
+}
+
+/* Avatar enhancements */
+.testi-avatar-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testi-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.avatar-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--green);
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.testimonial-3d:hover .avatar-glow {
+    opacity: 0.6;
+}
+
+.testimonial-3d:hover .testi-avatar-img {
+    transform: scale(1.1);
+}
+
+/* Stars */
+.testi-stars {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    letter-spacing: 3px;
+    filter: drop-shadow(0 0 5px rgba(223, 177, 91, 0.4));
+    transition: filter 0.3s;
+}
+
+.testimonial-3d:hover .testi-stars {
+    filter: drop-shadow(0 0 10px var(--gold));
+}
+
+/* Text */
+.testi-text {
+    font-size: 1.05rem;
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.testi-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 24px;
+}
+
+.testi-name {
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.testi-country {
+    font-size: 0.8rem;
+    color: var(--text3);
+    font-weight: 500;
+}
+
+/* Staggered delays (already in HTML) */
+.testimonial-3d:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.testimonial-3d:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .testimonials-grid-3d {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid-3d {
+        grid-template-columns: 1fr;
+    }
+}/* ===== TESTIMONIALS 3D ===== */
+.testimonials-grid-3d {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 80px;
+    perspective: 2000px;
+}
+
+.testimonial-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 28px;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: cardEntrance 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    opacity: 0;
+}
+
+.testimonial-3d.fade-in-up {
+    opacity: 0; /* initial state for animation */
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.testi-card-inner {
+    padding: 40px;
+    border-radius: 28px;
+    background: transparent;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-3d:hover {
+    transform: rotateX(5deg) rotateY(-5deg) translateZ(20px);
+    border-color: var(--green);
+    box-shadow: 20px 30px 60px rgba(0, 0, 0, 0.6), 0 0 30px var(--green-glow);
+}
+
+.testimonial-3d:hover .testi-card-inner {
+    background: rgba(0, 230, 160, 0.02);
+}
+
+/* Avatar enhancements */
+.testi-avatar-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testi-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.avatar-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--green);
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.testimonial-3d:hover .avatar-glow {
+    opacity: 0.6;
+}
+
+.testimonial-3d:hover .testi-avatar-img {
+    transform: scale(1.1);
+}
+
+/* Stars */
+.testi-stars {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    letter-spacing: 3px;
+    filter: drop-shadow(0 0 5px rgba(223, 177, 91, 0.4));
+    transition: filter 0.3s;
+}
+
+.testimonial-3d:hover .testi-stars {
+    filter: drop-shadow(0 0 10px var(--gold));
+}
+
+/* Text */
+.testi-text {
+    font-size: 1.05rem;
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.testi-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 24px;
+}
+
+.testi-name {
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.testi-country {
+    font-size: 0.8rem;
+    color: var(--text3);
+    font-weight: 500;
+}
+
+/* Staggered delays (already in HTML) */
+.testimonial-3d:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.testimonial-3d:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .testimonials-grid-3d {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid-3d {
+        grid-template-columns: 1fr;
     }
 }
