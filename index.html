@@ -66,18 +66,27 @@
     <div class="ambient-glow"></div>
 
     <!-- NAV -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-inner">
             <a href="#" class="logo"><img src="logo.png" alt="Stake" class="logo-img"></a>
-            <div class="nav-links">
-                <a href="#how-it-works">How it works</a>
-                <a href="#markets">Markets</a>
-                <a href="#why-stake">About us</a>
-                <a href="#resources">Resources</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#how-it-works" class="nav-link">How it works</a>
+                <a href="#markets" class="nav-link">Markets</a>
+                <a href="#rewards" class="nav-link">Rewards</a>
+                <a href="#why-stake" class="nav-link">Why Stake</a>
+                <a href="#regulated" class="nav-link">Safety</a>
+                <a href="#stories" class="nav-link">Stories</a>
             </div>
-            <div class="nav-cta">
-                <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" class="btn btn-green">Get AED 150</a>
+            <div class="nav-cta" id="nav-cta">
+                <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" target="_blank" class="btn btn-green">Get
+                    AED 150</a>
             </div>
+            <!-- Hamburger Menu for Mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -90,7 +99,8 @@
                 <p>Build a diversified real estate portfolio easily from your phone. Invest in Dubai and Saudi Arabia
                     from anywhere, starting from just $136.</p>
                 <div class="hero-buttons">
-                    <a href="#how-it-works" class="btn btn-green btn-lg">Start investing</a>
+                    <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" target="_blank"
+                        class="btn btn-green btn-lg">Start investing</a>
                     <a href="#how-it-works" class="btn btn-ghost btn-lg">Learn more</a>
                 </div>
                 <div class="hero-stats">
@@ -330,6 +340,10 @@
                         community.</p>
                 </div>
             </div>
+            <div class="text-center fade-in-up" style="margin-top: 48px;">
+                <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" target="_blank"
+                    class="btn btn-green btn-lg">Create Account & Get AED 150</a>
+            </div>
         </div>
     </section>
 
@@ -391,7 +405,8 @@
                             <div class="region-content">
                                 <div class="region-flag">🇦🇪</div>
                                 <h3>Dubai, UAE</h3>
-                                <p>The world's most dynamic real estate market</p>
+                                <p style="color: white; font-weight: bold;">The world's most dynamic real estate market
+                                </p>
                                 <div class="region-stats">
                                     <div class="region-stat"><strong>7.2%</strong><span>Avg Yield</span></div>
                                     <div class="region-stat"><strong>150+</strong><span>Properties</span></div>
@@ -404,7 +419,8 @@
                             <div class="region-content">
                                 <div class="region-flag">🇸🇦</div>
                                 <h3>Riyadh, KSA</h3>
-                                <p>Saudi Arabia's booming Vision 2030 market</p>
+                                <p style="color: white; font-weight: bold;">Saudi Arabia's booming Vision 2030 market
+                                </p>
                                 <div class="region-stats">
                                     <div class="region-stat"><strong>8.5%</strong><span>Avg Yield</span></div>
                                     <div class="region-stat"><strong>50+</strong><span>Properties</span></div>
@@ -456,6 +472,11 @@
                     </div>
                 </div>
             </div>
+
+            <div class="text-center fade-in-up" style="margin-top: 60px;">
+                <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" target="_blank"
+                    class="btn btn-green btn-lg">Start Building Your Portfolio</a>
+            </div>
         </div>
     </section>
 
@@ -487,6 +508,30 @@
                     <p>The more you invest, the faster you move through the tiers — unlocking bigger perks, bonuses, and
                         exclusive offers.</p>
                 </div>
+            </div>
+
+            <!-- Screens Marquee -->
+            <div class="screens-marquee-wrap fade-in-up" style="transition-delay: 0.4s;">
+                <div class="screens-marquee">
+                    <div class="screen-item"><img src="images/screens/screen1.avif" alt="App Screen 1"></div>
+                    <div class="screen-item"><img src="images/screens/screen2.avif" alt="App Screen 2"></div>
+                    <div class="screen-item"><img src="images/screens/screen3.avif" alt="App Screen 3"></div>
+                    <div class="screen-item"><img src="images/screens/screen4.avif" alt="App Screen 4"></div>
+                    <div class="screen-item"><img src="images/screens/screen5.avif" alt="App Screen 5"></div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="screen-item"><img src="images/screens/screen1.avif" alt="App Screen 1"></div>
+                    <div class="screen-item"><img src="images/screens/screen2.avif" alt="App Screen 2"></div>
+                    <div class="screen-item"><img src="images/screens/screen3.avif" alt="App Screen 3"></div>
+                    <div class="screen-item"><img src="images/screens/screen4.avif" alt="App Screen 4"></div>
+                    <div class="screen-item"><img src="images/screens/screen5.avif" alt="App Screen 5"></div>
+
+                </div>
+            </div>
+
+            <div class="text-center fade-in-up" style="margin-top: 60px; transition-delay: 0.2s;">
+                <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" target="_blank"
+                    class="btn btn-green btn-lg">Claim Your AED 150 Reward</a>
             </div>
         </div>
     </section>
@@ -536,6 +581,140 @@
                     <p>No hidden fees or surprises. Everything is clearly outlined upfront so you know exactly what to
                         expect.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROBUSTLY REGULATED -->
+    <section class="section bg-dark regulated-section" id="regulated">
+        <div class="section-inner">
+            <div class="text-center">
+                <div class="section-tag section-tag-green">Safety never sleeps</div>
+                <h2 class="section-title">Robustly regulated</h2>
+            </div>
+
+            <!-- Toggles (Visual only for now, can be wired with JS later if needed) -->
+            <div class="regulated-tabs fade-in-up">
+                <button class="reg-tab active" id="tab-dual">
+                    <i class="fa-solid fa-shield-check"></i> Dual regulated
+                </button>
+                <button class="reg-tab" id="tab-ownership">
+                    <i class="fa-solid fa-file-contract"></i> Ownership protection
+                </button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="regulated-card-box fade-in-up" style="transition-delay: 0.1s;">
+                <!-- Dual Regulated Content -->
+                <div class="reg-content-row" id="content-dual">
+                    <div class="reg-content-left">
+                        <div class="reg-icon-large"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Dual regulated</h3>
+                        <p>Invest with the assurance that we are dual regulated by the most prestigious regulators in
+                            the Middle East</p>
+                        <a href="#" class="btn btn-ghost btn-sm mt-4">Learn more</a>
+                    </div>
+                    <div class="reg-content-right">
+                        <!-- UAE Reg Card -->
+                        <div class="reg-authority-card">
+                            <div class="auth-card-top" style="margin-bottom: 24px;">
+                                <img src="images/regulators/dfsa_logo.png" alt="DFSA Dubai"
+                                    style="height: 40px; width: auto; object-fit: contain;">
+                            </div>
+                            <h4>Regulated by the DFSA in the UAE</h4>
+                            <p>An independent regulator of financial services conducted in or from the DIFC, a
+                                purpose-built financial free zone in Dubai.</p>
+                        </div>
+                        <!-- KSA Reg Card -->
+                        <div class="reg-authority-card">
+                            <div class="auth-card-top" style="margin-bottom: 24px;">
+                                <img src="images/regulators/cma_logo.png" alt="CMA Saudi Arabia"
+                                    style="height: 40px; width: auto; object-fit: contain;">
+                            </div>
+                            <h4>Regulated by the CMA in Saudi Arabia</h4>
+                            <p>We're regulated by the Capital Markets Authority (CMA) in Saudi Arabia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ownership Protection Content (Hidden by default) -->
+                <div class="reg-content-row" id="content-ownership" style="display: none;">
+                    <div class="reg-content-left">
+                        <div class="reg-icon-large"><i class="fa-solid fa-file-signature"></i></div>
+                        <h3>Ownership protection</h3>
+                        <p>Investors receive verifiable ownership documents issued by globally recognised government
+                            bodies and top tier fund managers</p>
+                        <a href="#" class="btn btn-ghost btn-sm mt-4">Learn more</a>
+                    </div>
+                    <div class="reg-content-right">
+                        <!-- Dubai Docs Card -->
+                        <div class="reg-authority-card">
+                            <div class="auth-card-top" style="margin-bottom: 24px;">
+                                <img src="images/regulators/dubai_land_dept.png" alt="Dubai Land Department"
+                                    style="height: 48px; width: auto; object-fit: contain;">
+                            </div>
+                            <h4>Share Certificates and Title Deeds in Dubai</h4>
+                            <p>Share Certificates are backed by the Dubai International Financial Centre, and Title
+                                Deeds are issued by the DLD.</p>
+                        </div>
+                        <!-- KSA Docs Card -->
+                        <div class="reg-authority-card">
+                            <div class="auth-card-top" style="margin-bottom: 24px;">
+                                <img src="images/regulators/ksa_registry.png" alt="Saudi Arabia Registry"
+                                    style="height: 48px; width: auto; object-fit: contain;">
+                            </div>
+                            <h4>Fund Unit Certificates in Saudi Arabia</h4>
+                            <p>Subscription certificates and fund unit registries are issued by professional fund
+                                administrators in Saudi Arabia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backed By Section -->
+            <div class="backed-by-section fade-in-up" style="transition-delay: 0.2s;">
+                <h4 class="text-center" style="font-size: 0.9rem; color: white; margin-bottom: 40px; font-weight: 600;">
+                    We're backed by</h4>
+                <div class="backed-logos-grid"
+                    style="grid-template-columns: repeat(4, 1fr); align-items: center; justify-items: center; gap: 40px 20px;">
+                    <!-- Row 1 -->
+                    <div class="b-logo"><img src="https://logo.clearbit.com/emiratesnbd.com" alt="Emirates NBD"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/propertyfinder.ae" alt="Property Finder"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/mubadala.com" alt="Mubadala"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/waed.net" alt="Waed by Aramco"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+
+                    <!-- Row 2 -->
+                    <div class="b-logo"><img src="https://logo.clearbit.com/mevp.com" alt="MEVP"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/republic.com" alt="Republic"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/aljomaih.com" alt="Al Jomaih Holding"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/madisonmarquette.com"
+                            alt="Madison Marquette" style="max-height: 40px; width: auto; object-fit: contain;"></div>
+
+                    <!-- Row 3 -->
+                    <div class="b-logo"><img src="https://logo.clearbit.com/ellingtonproperties.ae"
+                            alt="Ellington Properties" style="max-height: 40px; width: auto; object-fit: contain;">
+                    </div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/stv.vc" alt="STV"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/gfh.com" alt="GFH Partners"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/viviumholding.com" alt="Vivium"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                    <div class="b-logo"><img src="https://logo.clearbit.com/byvp.com" alt="BY Venture Partners"
+                            style="max-height: 40px; width: auto; object-fit: contain;"></div>
+                </div>
+            </div>
+
+            <div class="text-center fade-in-up" style="margin-top: 60px; transition-delay: 0.3s;">
+                <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" target="_blank"
+                    class="btn btn-green btn-lg">Invest Confidently Today</a>
             </div>
         </div>
     </section>
@@ -631,6 +810,64 @@
                     </div>
                 </div>
             </div>
+
+            <!-- VIDEO TESTIMONIALS -->
+            <div class="video-testimonials-section mt-5" style="margin-top: 80px;">
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <div class="section-tag"
+                        style="color: var(--gold); border-color: rgba(223, 177, 91, 0.3); background: rgba(223, 177, 91, 0.1);">
+                        Success Stories</div>
+                    <h3
+                        style="font-family: var(--font); font-size: 1.8rem; font-weight: 700; color: white; margin-top: 16px;">
+                        Watch their journey</h3>
+                </div>
+
+                <div class="video-carousel-wrapper fade-in-up">
+                    <div class="video-carousel" id="videoCarousel">
+                        <!-- Video 1: Meet David -->
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/_8U9U0_uNds"
+                                    title="Meet David | Stake Testimonials" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-info">
+                                <h4>Meet David</h4>
+                                <p>Stake Testimonials</p>
+                            </div>
+                        </div>
+
+                        <!-- Video 2: Golden Visa -->
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/nLy1H_7rp2E"
+                                    title="Unlock your Golden Visa with Stake!" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-info">
+                                <h4>Unlock your Golden Visa</h4>
+                                <p>with Stake!</p>
+                            </div>
+                        </div>
+
+                        <!-- Video 3: Meet Dan -->
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/SdfyIAKlJl0"
+                                    title="Meet Dan | Stake Testimonials" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-info">
+                                <h4>Meet Dan</h4>
+                                <p>Stake Testimonials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -644,9 +881,10 @@
                     <p>Nasir sent you a free brick worth <span>AED 150</span>. Stake empowers investors from all over
                         the world to digitally invest in prime real estate and build wealth through passive income.</p>
                     <div class="cta-action">
-                        <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" class="btn btn-green btn-lg"
-                            style="display: inline-flex; font-size: 1.1rem; padding: 18px 40px;">Claim your AED 150
-                            now</a>
+                        <a href="https://app.getstake.com/rewards?c=NASIR487&n=Nasir" target="_blank"
+                            class="btn btn-green btn-lg"
+                            style="display: inline-flex; font-size: 1.1rem; padding: 18px 40px;">Secure My Financial
+                            Freedom</a>
                     </div>
                 </div>
                 <div class="cta-visual-wrap fade-in-right">
@@ -718,6 +956,75 @@
         </div>
     </footer>
 
+    <!-- Tab Toggle Script for Regulated Section -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabDual = document.getElementById("tab-dual");
+            const tabOwnership = document.getElementById("tab-ownership");
+            const contentDual = document.getElementById("content-dual");
+            const contentOwnership = document.getElementById("content-ownership");
+
+            if (tabDual && tabOwnership) {
+                tabDual.addEventListener("click", () => {
+                    tabDual.classList.add("active");
+                    tabOwnership.classList.remove("active");
+                    contentDual.style.display = "flex";
+                    contentOwnership.style.display = "none";
+                });
+
+                tabOwnership.addEventListener("click", () => {
+                    tabOwnership.classList.add("active");
+                    tabDual.classList.remove("active");
+                    contentOwnership.style.display = "flex";
+                    contentDual.style.display = "none";
+                });
+            }
+
+            // Mobile Navigation Toggle
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("nav-links");
+            const navCta = document.getElementById("nav-cta");
+            const navLinksItems = document.querySelectorAll(".nav-link");
+            const body = document.body;
+
+            if (hamburger) {
+                hamburger.addEventListener("click", () => {
+                    hamburger.classList.toggle("active");
+                    navLinks.classList.toggle("active");
+                    if (navCta) navCta.classList.toggle("active");
+
+                    // Prevent scrolling when menu is open
+                    if (navLinks.classList.contains("active")) {
+                        body.style.overflow = "hidden";
+                    } else {
+                        body.style.overflow = "auto";
+                    }
+                });
+
+                // Close menu when a link is clicked
+                navLinksItems.forEach(link => {
+                    link.addEventListener("click", () => {
+                        hamburger.classList.remove("active");
+                        navLinks.classList.remove("active");
+                        if (navCta) navCta.classList.remove("active");
+                        body.style.overflow = "auto";
+                    });
+                });
+            }
+
+            // Navbar visual effect on scroll
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.style.background = "rgba(10, 15, 28, 0.95)";
+                    navbar.style.borderBottom = "1px solid rgba(255, 255, 255, 0.05)";
+                } else {
+                    navbar.style.background = "rgba(10, 15, 28, 0.8)";
+                    navbar.style.borderBottom = "1px solid transparent";
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
